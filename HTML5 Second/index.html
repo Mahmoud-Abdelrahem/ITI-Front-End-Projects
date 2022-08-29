@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .icon {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+
+        .icon a {
+            float: left;
+            text-align: center;
+            width: 20%;
+            padding: 13px 0;
+            transition: all 0.7s ease;
+            color: rgb(228, 26, 26);
+            font-size: 40px;
+            display: inline-block;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .icon a:hover {
+            background-color: goldenrod;
+        }
+
+        @font-face {
+            font-family: Lemon Jelly;
+            src: url("BeautifulPeoplePersonalUse-dE0g.ttf");
+        }
+
+        .font {
+            font-family: Lemon Jelly;
+            column-count: 3;
+            column-gap: 100px;
+            column-rule: 2px solid black;
+        }
+
+        #tig {
+            position: absolute;
+            animation: linear infinite;
+            animation-duration: 4s;
+            animation-name: run;
+        }
+
+        @keyframes run {
+            0% {
+                left: 0;
+            }
+
+            48% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                left: calc(100% - 100px);
+                transform: rotateY(180deg);
+            }
+
+            98% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                left: 0;
+                transform: rotateY(0deg);
+            }
+        }
+
+        body {
+            position: relative;
+        }
+
+        #avatar {
+            display: inline-block;
+            padding: 0 25px;
+            height: 70px;
+            font-size: 20px;
+            line-height: 70px;
+            border-radius: 30px;
+            background-color: gray;
+        }
+
+        #avatar img {
+            float: left;
+            margin: 0 10px 0 -27px;
+            height: 70px;
+            width: 75px;
+            border-radius: 50%;
+        }
+
+        #avatar #btn {
+            padding-left: 15px;
+            color: #888;
+            font-weight: bold;
+            float: right;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 300px;}
+        }
+
+        #avatar #btn:hover {
+            color: black;
+        }
+
+        .img1 {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            padding: 5px;
+            transition: transform .3s;
+        }
+
+        .img1:hover {
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li> <a href="#"><i class="fa fa-globe"></i></a></li>
+            <li><a href="#"><i class="fa fa-trash"></i></a></li>
+        </ul>
+    </div>
+
+    <p class="font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, nesciunt consequuntur voluptatem
+        magnam odit architecto excepturi aliquam dolore pariatur blanditiis voluptatum quam libero nemo eum explicabo
+        alias officiis numquam. Assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nemo
+        temporibus ipsam eius aspernatur consequuntur possimus atque magnam repellat magni ad corporis quis optio qui
+        nam, culpa fugiat cumque at.
+
+    </p>
+    <br><br><br><br>
+    <img id="tig" src="tiger.gif" alt="tiger">
+    <br><br><br><br><br><br><br>
+
+    <div id="avatar">
+        <img src="avatar.png" alt="Person" width="100" height="100">
+        <span id="hide"> Mahmoud Abdelrahem <span  id="btn">&times;</span></span>
+
+    </div>
+
+    <br><br><br><br>
+    <div class="zoom">
+        <img class="img1" src="images.jpg" alt="1">
+        <img class="img1" src="images1.jpg" alt="2">
+        <img class="img1" src="images2.jpg" alt="3">
+        <img class="img1" src="images3.jpg" alt="4">
+    </div>
+    <br><br>
+    <script>
+            document.getElementById("btn").addEventListener("click",function(){
+                document.getElementById("avatar").style.transition
+            });
+
+    </script>
+</body>
+
+</html>
