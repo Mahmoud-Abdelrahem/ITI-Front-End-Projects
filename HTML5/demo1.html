@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+        * {
+            margin: 8px;
+            padding: 8px;
+        }
+
+        #SectionOfPage {
+            width: 100%;
+            height: auto;
+            border: 2px solid black;
+            margin: 10px auto;
+        }
+
+        #Header,
+        #footer {
+            background-color: lightgray;
+            padding: 12px;
+        }
+
+        #Header>p,
+        #footer>p {
+            text-align: center;
+            font: bold 15px tahoma;
+            color: blue;
+        }
+
+        #art {
+            background-color: gray;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #Nav {
+            background-color: gray;
+            margin: 10px;
+        }
+
+        #Nav li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 12px;
+            color: white;
+            width: 100px;
+        }
+        #sec
+        {
+            column-count: 3;
+            column-gap: 10px;
+        }
+        #Nav li:hover {
+            color: black;
+            text-decoration: underline;
+            cursor: pointer;
+            text-decoration-line: none;
+        }
+
+        #Aside1 h1,
+        #Aside2 h1,
+        #art h1 {
+            text-align: center;
+        }
+
+        #Aside1 {
+            float: left;
+            background-color: gray;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        #art {
+            background-color: gray;
+            margin: 15px;
+            padding: 15px;
+            float:left ;
+        }
+
+        #Aside2 {
+            float: right;
+            background-color: gray;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        #footer {
+            background-color: rebeccapurple;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="SectionOfPage">
+        <header id="Header">
+            <p>Web Page</p>
+        </header>
+        <nav id="Nav">
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <div id="sec">
+            <div id="Aside1">
+                <h1>Side 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia minus eveniet rem deserunt omnis,
+                    laborum corporis mollitia tenetur iste esse illo dolor ipsam iure unde commodi autem quidem ducimus.
+                    Provident.</p>
+
+            </div>
+            <div id="art">
+                <h1>Main Content</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusantium obcaecati quo hic eius
+                    atque asperiores officia. Eius dolores, iure soluta illo optio ipsum aliquid sed voluptas omnis, qui
+                    reprehenderit.</p>
+
+            </div>
+            <div id="Aside2">
+                <h1>Side 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia minus eveniet rem deserunt omnis,
+                    laborum corporis mollitia tenetur iste esse illo dolor ipsam iure unde commodi autem quidem ducimus.
+                    Provident.</p>
+
+            </div>
+        </div>
+        <footer id="footer">
+            <p>CopyRights &copy; Reserved to Web Development Summer Training Students</p>
+        </footer>
+
+
+    </section>
+</body>
+
+</html>
