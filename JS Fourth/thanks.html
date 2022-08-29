@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <span>Thanks</span>
+  <script>
+
+    // document.write(x.split("&")[0].split("=")[1].split("+")[0] +" "+ x.split("&")[0].split("=")[1].split("+")[1] +" "+ x.split("&")[0].split("=")[1].split("+")[2])
+    
+    var x = location.search.split("&")[0].split("=")[1].split("+");
+    for (var i = 0; i < x.length; i++) {
+
+      document.write(x[i] +" ");
+
+    }
+
+  </script>
+</body>
+
+</html>
