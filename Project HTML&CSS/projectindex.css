@@ -1,0 +1,288 @@
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////Menu and Header */
+*{
+    margin: 0;
+    padding: 0;
+}
+#header
+{
+    height: 800px;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+}
+.cont
+{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.logo
+{
+    margin-top: 30px;
+    width: 150px;
+}
+.header1
+{
+max-width: 350px;
+margin-top: 140px;
+}
+h1
+{
+    font-size: 35px;
+}
+.square
+{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background:#f67c92;
+    margin: 15px 0;
+}
+.btn
+{
+    cursor: pointer;
+    padding: 18px 35px;
+    background: transparent;
+    border:2px solid #f67c92;
+    outline: none;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 60px;
+}
+.line1
+{
+    width: 50px;
+    height: 2px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line2
+{
+    width: 80px;
+    height: 2px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line3
+{
+    width: 100px;
+    height: 2px;
+    background: #f67c92;
+    display: inline-block;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// Side Nav */
+#sideNav
+{
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #f67c92;
+    z-index: 2;
+    transition: .7s;
+}
+nav ul li
+{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover
+{
+    background-color: white;
+    padding: 15px;
+    transition: .7s;
+}
+#menubtn
+{
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 2;
+    cursor: pointer;
+}
+#menubtn:hover
+{
+    width: 58px;
+    transition: .7s;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////About Section */
+/* <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////// Offer--> */
+#about,#offer
+{
+    padding: 100px 0;
+    display: flex;
+}
+.about-left img,.offer-left img
+{
+    width: 800px;
+}
+.about-left,.offer-left
+{
+    float: left;
+    flex: 50%;
+}
+.about-right,.offer-right
+{
+    float: right;
+    flex-basis: 50%;
+    text-align: right;
+}
+.about-text,.offer-text
+{
+    max-width: 800px;
+    padding-top: 170px;
+    margin-right: 50px;
+    display: inline-block;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// feature */
+#feat
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.feat-row
+{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+.feat-side
+{
+    flex-basis: 33%;
+    text-align: center;
+    margin: 0 80px;
+}
+.feat-side img
+{
+    width: 100px;
+}
+.feat-side h4
+{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// Courses */
+#courses
+{
+    padding: 100px 0;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+}
+.courses-right
+{
+    float: right;
+    flex-basis: 50%;
+}
+.courses-left
+{
+    float: left;
+    flex-basis: 50%;
+}
+.courses-right img
+{
+    width: 800px;
+}
+.courses-text
+{
+    max-width: 500px;
+    margin-left: 10%;
+}
+.courses-text h1,p
+{
+    margin-bottom: 20px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
+#contact
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.cont-contact
+{
+    display: flex;
+    align-items: center;
+}
+.contact-right
+{
+    flex-basis: 50%;
+}
+.contact-left
+{
+    flex-basis: 50%;
+    margin-left: 3%;
+}
+.contact-right img
+{
+    width: 800px;
+    display: flex;
+}
+form
+{
+    max-width: 400px;
+    margin: 30px 0;
+}
+form input
+{
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    border: 2px solid #f67c92;
+}
+.button
+{
+    width: 100%;
+    display: flex;
+}
+.button button
+{
+    flex-basis: 50%;
+    margin: 10px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// Footer */
+#footer
+{
+    padding: 50px 0 30px ;
+}
+hr
+{
+    width: 100%;
+    border: 1px solid #f67c92;
+}
+.cont-footer h1
+{
+    text-align: center;
+    margin-top: 40px;
+}
+/* <!--///////////////////////////////////////////////////////////////////////////////////////// icon --> */
+.icon
+{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%) ;
+}
+.icon img
+{
+    width: 20px;
+    display: block;
+    cursor: pointer;
+    margin: 25px 15px;
+}
+.icon img:hover
+{
+    width: 30px;
+    transition: .5s;
+}
