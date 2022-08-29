@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        #fristdiv {
+            width: 100px;
+            height: 100px;
+            border: solid 2px black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fristdiv" ondragover="allowDragOver(event)" ondrop="dropElem(event)"></div>
+    <br>
+    <br>
+    <img id="image" src="index.jpg" width="100" height="100" draggable="true" ondragstart="dragElem(event)">
+    <br><br>
+    <p id="dim"></p>
+    <br><br><br>
+    
+    <svg viewBox="0 0 200 200" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+        <circle id="circ1" cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
+        <g id="eyes">
+            <circle cx="61" cy="82" r="12" />
+            <circle cx="127" cy="82" r="12" />
+        </g>
+        <path d="m136.81 116.53c.69 26.17-64.11 42-81.52-.73" style="fill:none; stroke: black; stroke-width: 3;" />
+    </svg>
+
+    <br><br><br>
+
+    <button onclick="getLocation()">location</button>
+    <p id="loc"></p>
+
+    <script>
+        function allowDragOver(ev) {
+            ev.preventDefault();
+        }
+
+        function dragElem(ev) {
+
+            ev.dataTransfer.setData("catimage", ev.target.id);
+        }
+
+        function dropElem(ev) {
+
+            var data = ev.dataTransfer.getData("catimage");
+            ev.target.appendChild(document.getElementById(data));
+
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+        var i = 0;
+        
+        document.getElementById("image").addEventListener("dragend", function () {
+            i++;
+            sessionStorage.setItem("counter", i);
+            var value1 = sessionStorage.getItem("counter");
+            document.getElementById("dim").innerHTML = "Counter is : " + value1;
+        })
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function check() {
+            document.getElementById("circ1").style.fill = "red";
+            alert("This is Eyes")
+        }
+        
+        document.getElementById("eyes").addEventListener("mouseover", check);
+
+        document.getElementById("eyes").addEventListener("mouseout", function(){
+            document.getElementById("circ1").style.fill = "yellow";
+        });
+/////////////////////////////////////////////////////////////////////////////
+        var par = document.getElementById("loc");
+
+        function getLocation() {
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition, showError)
+
+            } else {
+                par.innerHTML = "Geolocation is not available on your browser";
+
+
+            }
+        }
+        function showPosition(pos) {
+            var lat = pos.coords.latitude;
+            var lon = pos.coords.longitude;
+            par.innerHTML = "Latitude : " + lat + "<br> Longitude : " + lon;
+            var url = "https://www.google.com/maps?q=" + lat + "," + lon;
+
+            window.open(url, '_blank');
+        }
+
+        function showError(error) {
+            console.log(error);
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    par.innerHTML = "User denied the request for geolocation";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
