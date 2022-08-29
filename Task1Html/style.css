@@ -1,0 +1,28 @@
+h1
+{
+    text-align: center;
+}
+div
+{
+    text-align: center;
+}
+.s
+{   
+    margin: 30px;
+    width: 100px;
+    float: right;
+}
+.my
+{
+    background-color: gray;
+    
+}
+img
+{
+    width: 30px;
+    padding: 2px;
+}
+.look
+{
+    width: 200px;
+}
