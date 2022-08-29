@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> CSS magic</title>
+	<link rel="stylesheet" href="Style.css">
+	<style>
+		.none-bullet-list {
+			list-style-type: none;
+		}
+
+		li a {
+			color: red;
+			background-color: pink;
+			text-decoration-line: none;
+		}
+
+		li a:hover {
+			background-color: red;
+			color: pink;
+		}
+		#loginform
+		{
+			border: 2px dashed rgb(20,70,60);
+		}
+		h2+p
+		{
+			font-weight: bold;
+			font-size: 12px;
+		}
+		input[type="text"]
+		{
+			background-color: yellow;
+		}
+		input[type="text"]:focus
+		{
+			background-color: white;
+		}
+		.tabled-bordered p 
+		{
+			display: table-cell;
+			border: 2px solid black;
+			padding: 5px;
+		}
+		#aboutus::after
+		{
+			content: " Read this";
+			color: yellow;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div style="width:100%; background-color: red;" id="header">
+		<h1>This is the page header</h1>
+	</div>
+	<span style="width=25%; background-color:gray; float:left;" id="linksbar">
+		<div id="loginform">
+			User name: <input type="text" />
+			</br>
+			Password: <input type="password" />
+			<br />
+			<input type="checkbox" /> remember me
+			<br />
+			<button>login</button>
+		</div>
+		<h2> site menu</h2>
+		<ul class="none-bullet-list">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+	</span>
+	<span style="width:75% ; background-color:pink; float:left " id="content">
+		<h2> about us</h2>
+		<p id="aboutus">
+			This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is
+			a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a
+			paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a
+			paragraph This is a paragraph.
+		</p>
+
+		<div class="tabled-bordered" id="titles">
+			<p> title1</p>
+			<p> title2</p>
+			<p> title3</p>
+		</div>
+
+	</span>
+
+
+
+</body>
+
+</html>
